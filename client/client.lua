@@ -5,63 +5,38 @@
 -- ███████╗ ╚████╔╝ ███████╗██║ ╚████║   ██║   ███████║
 -- ╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
                                                     
-
-local QBCore = exports["qb-core"]:GetCoreObject()
-local PlayerData = QBCore.Functions.GetPlayerData()
-local ped, pid, Player, playerId, player
-
-
-RegisterNetEvent("QBCore:Client:OnPlayerUnload", function()
-    PlayerData = {}
-end)
-
-RegisterNetEvent("QBCore:Client:OnPlayerLoaded")
-AddEventHandler("QBCore:Client:OnPlayerLoaded", function ()
-    PlayerData = {}
-end)
-
-GroupDigits = function(value)
-    local left,num,right = string.match(value,'^([^%d]*%d)(%d*)(.-)$')
-    return left..(num:reverse():gsub('(%d%d%d)','%1' .. ','):reverse())..right
-end
-
-
 Citizen.CreateThread(function ()
     while true do 
         Wait(500)
-        if LocalPlayer.state.isLoggedIn then
-            
-            QBCore.Functions.GetPlayerData(function(PlayerData)
-                QBCore.Functions.TriggerCallback('Ultra-Scoreboard:CurrentPlayers', function(player)
-                    ped = PlayerPedId()
-                    pid = GetPlayerServerId(PlayerId())
-                    Player = QBCore.Functions.GetPlayerData()    
-                    playerId = PlayerId()
+        ESX.TriggerServerCallback('Ultra-Scoreboard:CurrentPlayers', function(player,name)
+            local playerId = GetPlayerServerId(PlayerId())
+            local bank
 
-                    SendNUIMessage({
-                        action = 'updatedata',
-                        pid = pid,
-                        phone = Player.charinfo.phone,
-                        job = Player.job.label or Config.NoJob,
-                        name = Player.charinfo.firstname.. " " ..PlayerData.charinfo.lastname,
-                        bank = Config.TypeIconMoney ..GroupDigits(Player.money['bank']),
-                        logo = Config.Logo,
-                        playerss = player,
-                        maxPlayers = Config.MaxPlayers,
-                    })
-                end)
-            end)
-        else
-            SendNUIMessage({action = 'hide'})
-        end
-        Wait(500)
+            for i = 1, #ESX.PlayerData.accounts, 1 do
+                if ESX.PlayerData.accounts[i].name == "bank" then
+                    bank = ESX.PlayerData.accounts[i].money
+                end
+            end
+
+            SendNUIMessage({
+                action = 'updatedata',
+                pid = playerId,
+                job = ESX.PlayerData.job.label or Config.NoJob,
+                name = name,
+                bank = Config.TypeIconMoney ..ESX.Math.GroupDigits(bank),
+                logo = Config.Logo,
+                playerss = player,
+                maxPlayers = Config.MaxPlayers,
+            })
+        end)
+    Wait(500)
     end
 end)
 
 Citizen.CreateThread(function ()
     while true do 
         Wait(500)
-        QBCore.Functions.TriggerCallback('Ultra-Scoreboard:CurrentPlayers2', function(police, ambulance, mechanic, realestate, taxi, abogado)
+        ESX.TriggerServerCallback('Ultra-Scoreboard:CurrentPlayers2', function(police, ambulance, mechanic, realestate, taxi, abogado)
             SendNUIMessage({
                 action = 'updatedatajob',
                 mechanic = mechanic,
