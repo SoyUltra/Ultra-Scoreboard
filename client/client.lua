@@ -44,6 +44,7 @@ Citizen.CreateThread(function ()
                         phone = Player.charinfo.phone,
                         job = Player.job.label or Config.NoJob,
                         name = Player.charinfo.firstname.. " " ..PlayerData.charinfo.lastname,
+                        cid = PlayerData.citizenid,
                         bank = Config.TypeIconMoney ..GroupDigits(Player.money['bank']),
                         logo = Config.Logo,
                         playerss = player,

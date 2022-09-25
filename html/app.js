@@ -8,6 +8,7 @@ window.addEventListener("message", function(event) {
             $('.logoconfig').attr('src', v.logo);
             $('.job').text('Job: '+v.job);
             $('.name').text('Name: '+v.name);
+            $('.cid').text('Citizen ID: '+v.cid);
             $('.phone').text('Phone: '+v.phone);
             $('.id').html('ID: '+v.pid);
             $('.bank').text('Bank: '+bank);
