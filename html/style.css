@@ -1,0 +1,244 @@
+:root {
+--base-color: #388eff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    letter-spacing: .03vw;
+    width: 100%;
+    height: 100%;
+
+    /* background: #464646; */
+}
+
+
+.mainscore {
+	position: absolute;
+    top: 50%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+	width: 11vw;
+	height: 20vw;
+	background: rgba(0, 0, 0, 0.575);
+	border-radius: .5vw;
+}
+
+
+.logoconfig {
+	position: relative;
+	top: -4vw;
+	left: 2.5vw;
+	z-index: 100;
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.title {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	position: absolute;
+    color: var(--base-color);
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.637);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-size: .7vw;
+	text-align: center;
+	padding-top: 1.5vw;
+    top: -.8vw;
+	width: 11vw;
+	height: 2.5vw;
+	border-radius: .5vw .5vw 0vw 0vw;
+}
+
+.dataped {
+	position: absolute;
+    color: white; 
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .8vw;
+	text-align: left;
+    top: 3.8vw;
+	left: 1.2vw;
+}
+
+.playersonline {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	position: absolute;
+	color: white; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .9vw;
+	text-align: center;
+    bottom: 0vw;
+	width: 11vw;
+	height: 1.3vw;
+	border-radius: 0vw 0vw .5vw .5vw;
+	background-color: var(--base-color);
+}
+
+.jobonline {
+	position: absolute;
+    color: white; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .8vw;
+	text-align: left;
+    top: 11.6vw;
+	left: 1.2vw;
+}
+
+.titlejob {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	position: absolute;
+    color: rgb(255, 255, 255); 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .7vw;
+	text-align: center;
+	top: 8.4vw;
+	width: 11vw;
+	border-radius: 0vw 0vw 0vw 0vw;
+	color: var(--base-color);
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.637);
+}
+
+span {
+	position:absolute;
+	right: -3vw;
+    text-shadow: 0px 1px 1px rgba(150, 150, 150, 0.637);
+	border-radius: .2vw;
+	padding: 0vw .2vw 0vw.2vw;
+	background-color: rgba(131, 143, 255, 0.685);
+}
+
+.Lines {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+    position: absolute;
+    height: 10.5px;
+    width: 155px;
+    border: .1vw solid  rgba(255, 255, 255, 0.493);
+    border-bottom: none;
+    border-left: none;
+    margin-left: auto;
+	top: 9.3vw;
+	left: 1.4vw;
+
+}
+
+
+.LinesDOWN {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+    position: absolute;
+    height: 10.5px;
+    width: 155px;
+    border: .1vw solid  rgba(255, 255, 255, 0.493);
+    border-top: none;
+    border-right: none;
+    margin-left: auto;
+	top: 10.5vw;
+	left: 1.4vw;
+
+}
+
+/* animacion logo */
+
+ @-webkit-keyframes heartbeat {
+	from {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	  -webkit-transform-origin: center center;
+			  transform-origin: center center;
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	10% {
+	  -webkit-transform: scale(0.91);
+			  transform: scale(0.91);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	17% {
+	  -webkit-transform: scale(0.98);
+			  transform: scale(0.98);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	33% {
+	  -webkit-transform: scale(0.87);
+			  transform: scale(0.87);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	45% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+  }
+  @keyframes heartbeat {
+	from {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	  -webkit-transform-origin: center center;
+			  transform-origin: center center;
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	10% {
+	  -webkit-transform: scale(0.91);
+			  transform: scale(0.91);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	17% {
+	  -webkit-transform: scale(0.98);
+			  transform: scale(0.98);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	33% {
+	  -webkit-transform: scale(0.87);
+			  transform: scale(0.87);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	45% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+  }
+  
+/* animacion text */
+
+  @-webkit-keyframes tracking-in-expand {
+	0% {
+	  letter-spacing: -0.5em;
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0.6;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes tracking-in-expand {
+	0% {
+	  letter-spacing: -0.5em;
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0.6;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
