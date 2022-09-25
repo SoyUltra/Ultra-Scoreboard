@@ -8,7 +8,6 @@ window.addEventListener("message", function(event) {
             $('.logoconfig').attr('src', v.logo);
             $('.job').text('Job: '+v.job);
             $('.name').text('Name: '+v.name);
-            $('.phone').text('Phone: '+v.phone);
             $('.id').html('ID: '+v.pid);
             $('.bank').text('Bank: '+bank);
             $('.playersonline').html('<i class="fas fa-user"></i> Players:'+v.playerss+"/"+v.maxPlayers+'');
