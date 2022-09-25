@@ -1,7 +1,11 @@
 ESX.RegisterServerCallback('Ultra-Scoreboard:CurrentPlayers', function(source, cb)
     local players = ESX.GetExtendedPlayers()
+    local name
 
-    cb(#players)
+    for _, xPlayer in pairs(players) do
+        name = xPlayer.getName()
+    end
+    cb(#players,name)
 end)
 
 ESX.RegisterServerCallback('Ultra-Scoreboard:CurrentPlayers2', function(source, cb)
