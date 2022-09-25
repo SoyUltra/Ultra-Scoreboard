@@ -1,4 +1,8 @@
 # Ultra-Scoreboard
+
+QBCore support
+ESX coming soon
+
 FREE | Scoreboard
  
 
