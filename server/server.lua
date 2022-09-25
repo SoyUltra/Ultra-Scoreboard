@@ -1,21 +1,12 @@
+ESX.RegisterServerCallback('Ultra-Scoreboard:CurrentPlayers', function(source, cb)
+    local players = ESX.GetExtendedPlayers()
 
-local QBCore = exports['qb-core']:GetCoreObject()
-
-QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers', function(source, cb)
-
-    local TotalPlayers = 0
-
-    for k, v in pairs(QBCore.Functions.GetPlayers()) do
-        local Player = QBCore.Functions.GetPlayer(v)
-        TotalPlayers = TotalPlayers + 1
-    end
-
-    cb(TotalPlayers)
-
+    cb(#players)
 end)
 
-QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(source, cb)
-
+ESX.RegisterServerCallback('Ultra-Scoreboard:CurrentPlayers2', function(source, cb)
+    local players = ESX.GetExtendedPlayers()
+    
     local MechanicCount = 0
     local PoliceCount = 0
     local AmbulanceCount = 0
@@ -23,34 +14,20 @@ QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(sou
     local TaxiCount = 0
     local AbogadoCount = 0
 
-    for k, v in pairs(QBCore.Functions.GetPlayers()) do
-        local Player = QBCore.Functions.GetPlayer(v)
-        
-        if Player.PlayerData.job.name == "mechanic" then
+    for _, xPlayer in pairs(players) do
+        if xPlayer.job.name == "mechanic" then
             MechanicCount = MechanicCount + 1
-        end
-
-        if Player.PlayerData.job.name == "police" then
+        elseif xPlayer.job.name == "police" then
             PoliceCount = PoliceCount + 1
-        end
-
-        if Player.PlayerData.job.name == "ambulance" then
+        elseif xPlayer.job.name == "ambulance" then
             AmbulanceCount = AmbulanceCount + 1
-        end
-
-        if Player.PlayerData.job.name == "realestate" then
+        elseif xPlayer.job.name == "realestate" then
             RealestateCount = RealestateCount + 1
-        end
-
-        if Player.PlayerData.job.name == "taxi" then
+        elseif xPlayer.job.name == "taxi" then
             TaxiCount = TaxiCount + 1
-        end
-
-        if Player.PlayerData.job.name == "abogado" then
+        elseif xPlayer.job.name == "abogado" then
             AbogadoCount = AbogadoCount + 1
         end
     end
-
     cb(PoliceCount, AmbulanceCount, MechanicCount, RealestateCount, TaxiCount, AbogadoCount)
-
 end)
