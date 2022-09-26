@@ -1,21 +1,26 @@
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
-QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers', function(source, cb)
-
+QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers', function(_, cb)
     local TotalPlayers = 0
 
-    for k, v in pairs(QBCore.Functions.GetPlayers()) do
-        local Player = QBCore.Functions.GetPlayer(v)
+    for _ in pairs(QBCore.Functions.GetPlayers()) do
         TotalPlayers = TotalPlayers + 1
     end
 
     cb(TotalPlayers)
-
 end)
 
-QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(source, cb)
+QBCore.Functions.CreateCallback('Ultra-Scoreboard:server:GetPlayersArrays', function(_, cb)
+    local players = {}
+    for _, v in pairs(QBCore.Functions.GetQBPlayers()) do
+        players[v.PlayerData.source] = {}
+        players[v.PlayerData.source].permission = QBCore.Functions.IsOptin(v.PlayerData.source)
+    end
+    cb(players)
+end)
 
+QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(_, cb)
     local MechanicCount = 0
     local PoliceCount = 0
     local AmbulanceCount = 0
@@ -23,9 +28,9 @@ QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(sou
     local TaxiCount = 0
     local AbogadoCount = 0
 
-    for k, v in pairs(QBCore.Functions.GetPlayers()) do
+    for _, v in pairs(QBCore.Functions.GetPlayers()) do
         local Player = QBCore.Functions.GetPlayer(v)
-        
+
         if Player.PlayerData.job.name == "mechanic" then
             MechanicCount = MechanicCount + 1
         end
@@ -52,5 +57,4 @@ QBCore.Functions.CreateCallback('Ultra-Scoreboard:CurrentPlayers2', function(sou
     end
 
     cb(PoliceCount, AmbulanceCount, MechanicCount, RealestateCount, TaxiCount, AbogadoCount)
-
 end)
