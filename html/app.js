@@ -42,7 +42,7 @@ document.addEventListener('keydown', this.exitKey)
 
 function exitKey(event) {
             
-    if (event.keyCode==27 || event.keyCode==8)
+    if (event.keyCode==27 || event.keyCode==8 || event.keyCode == 36)
     
     {
         $.post("https://Ultra-Scoreboard/exit", JSON.stringify({}))
