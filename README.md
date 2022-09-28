@@ -1,11 +1,10 @@
 # Ultra-Scoreboard
 
 QBCore support
-ESX coming soon
+ESX support
 
 FREE | Scoreboard
  
-
 ID - NAMES - PHONE - JOB - BANK
 
 ONLINE JOBS
