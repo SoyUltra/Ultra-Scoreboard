@@ -35,7 +35,8 @@ window.addEventListener("message", function(event) {
         break;
 
         case "bottom":
-            $("#robberybottom").click(function () {
+            $("#robberybottom").click(function (e) {
+                e.stopImmediatePropagation();
                 if ( robberyshow == false )
                 {
                     $('.robbery').show(300)
