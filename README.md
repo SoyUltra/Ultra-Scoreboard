@@ -11,7 +11,7 @@ ONLINE JOBS
 
 ONLINE PLAYERS
 
-NEW UPDATE ROBBERYS
+NEW 1.2 UPDATE ROBBERYS
 
 
 ![unknoAAwn](https://user-images.githubusercontent.com/86611932/192689145-d85d967e-447b-4ad6-bf76-ccc7b8599a64.png)
