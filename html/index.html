@@ -14,66 +14,137 @@
         <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script> 
         <script src="jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
 
     </head>
 
     <body>
-        
+        <!-- <div class="allscore" style="display: none;"></div> -->
         <div class="allscore" style="display: none;">
             <div class="mainscore">
                 
                 <img class="logoconfig" src="" style="width: 6vw; height: 6vw;"/>
-                <!-- <img class="logoconfig" src="/html/img/logo.png" style="width: 6vw; height: 6vw;"/> -->
 
-                <div class="title">
-                    <h1>SCOREBOARD</h1>
+                <div class="pgae1">
+                    <div class="title">
+                        <h1>SCOREBOARD</h1>
+                    </div>
+
+                    <div class="dataped">
+                        <div class="id">ID: 1</div>
+                        <div class="name">Name: Clau</div>
+                        <div class="phone">Phone: 4855698</div>
+                        <div class="job">Job: Mechanic</div>
+                        <div class="bank">Bank: 300,000</div>
+                    </div>
+
+                    <div class="playersonline" id="playersonline"><i class="fas fa-user"></i> Players: 35/120</div>
+
+                        <div class="titlejob">
+                            <h1>ONLINE JOB</h1>
+                        </div>
+
+                    <div class="jobonline">
+                        <div class="job1"><i class="fas fa-wrench"></i> MECHANIC
+                            <span class="jdat1"> 0</span>
+                        </div>
+
+                        <div class="job2"><i class="fas fa-star"></i> POLICE
+                            <span class="jdat2"> 0</span>
+                        </div>
+
+                        <div class="job3"><i class="fas fa-book-medical" ></i> AMBULANCE
+                            <span class="jdat3"> 0</span>
+                        </div>
+
+                        <div class="job4"><i class="fas fa-house" ></i> REALE STATE
+                            <span class="jdat4"> 0</span>
+                        </div>
+
+                        <div class="job5"><i class="fas fa-car" ></i> TAXI
+                            <span class="jdat5"> 0</span>
+                        </div>
+
+                        <div class="job6"><i class="fas fa-user" ></i> ABAGADO
+                            <span class="jdat6"> 0</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="Lines"></div>
+                    <div class="LinesDOWN"></div>
                 </div>
 
-                <div class="dataped">
-                    <div class="id">ID: 1</div>
-                    <div class="name">Name: Clau</div>
-                    <div class="phone">Phone: 4855698</div>
-                    <div class="job">Job: Mechanic</div>
-                    <div class="bank">Bank: 300,000</div>
-                </div>
-
-                <div class="playersonline" id="playersonline"><i class="fas fa-user"></i> Players: 35/120</div>
-
-                    <div class="titlejob">
-                        <h1>ONLINE JOB</h1>
-                    </div>
-
-                <div class="jobonline">
-                    <div class="job1"><i class="fas fa-wrench"></i> MECHANIC
-                        <span class="jdat1"> 0</span>
-                    </div>
-
-                    <div class="job2"><i class="fas fa-star"></i> POLICE
-                        <span class="jdat2"> 0</span>
-                    </div>
-
-                    <div class="job3"><i class="fas fa-book-medical" ></i> AMBULANCE
-                        <span class="jdat3"> 0</span>
-                    </div>
-
-                    <div class="job4"><i class="fas fa-house" ></i> REALE STATE
-                        <span class="jdat4"> 0</span>
-                    </div>
-
-                    <div class="job5"><i class="fas fa-car" ></i> TAXI
-                        <span class="jdat5"> 0</span>
-                    </div>
-
-                    <div class="job6"><i class="fas fa-user" ></i> ABAGADO
-                        <span class="jdat6"> 0</span>
+                <div class="planelrobberyalll" style="display: none;">
+                    <div class="planelrobberyall">
+                        <a class="robberybottom" id="robberybottom" href="#robbery">
+                            <div class="robberypanel">ROBBERIES</div>
+                        </a>
                     </div>
                 </div>
 
-                
-                <div class="Lines"></div>
-                <div class="LinesDOWN"></div>
+                <div class="robbery" id="robbery" style="display: none;">
+
+                    <div class="robberyconte" id="robberyconte"></div>
+
+                    <div class="titlejob" style="top: 1.5vw;">
+                        <h1>ROBBERIES</h1>
+                        <div class="Lines" style="top: 1.1vw;" ></div>
+                        <div class="LinesDOWN" style="top: 2vw;"></div>
+                    </div>
+                    
+                    <div class="robs">
+                        <div class="rob1"><i class="fas fa-user-ninja"></i> FLEECA
+                            <span class="rdat1"> ✘</span>
+                        </div>
+    
+                        <div class="rob2"><i class="fas fa-user-ninja"></i> PACIFIC BANK
+                            <span class="rdat2"> ✘</span>
+                        </div>
+    
+                        <div class="rob3"><i class="fas fa-user-ninja" ></i> VANGELICO
+                            <span class="rdat3"> ✘</span>
+                        </div>
+    
+                        <div class="rob4"><i class="fas fa-user-ninja" ></i> STORE
+                            <span class="rdat4"> ✘</span>
+                        </div>
+
+                        <div class="rob5"><i class="fas fa-user-ninja" ></i> HUMANE LABS
+                            <span class="rdat5"> ✘</span>
+                        </div>
+
+                        <div class="rob6"><i class="fas fa-user-ninja" ></i> BOBCAT
+                            <span class="rdat6"> ✘</span>
+                        </div>
+
+                        <div class="rob7"><i class="fas fa-user-ninja" ></i> UNION
+                            <span class="rdat7"> ✘</span>
+                        </div>
+
+                        <div class="rob8"><i class="fas fa-user-ninja" ></i> YACHT
+                            <span class="rdat8"> ✘</span>
+                        </div>
+
+                        <div class="rob9"><i class="fas fa-user-ninja" ></i> VANT
+                            <span class="rdat9"> ✘</span>
+                        </div>
+                    </div>
+
+                    <div class="rulesrob">
+                        <div class="titlejob" style="top: 13.4vw; font-size: .5vw;">
+                            <h1>RULES</h1>  
+                        </div>
+                        <div class="rulesdetail">
+                            <h1>The Robberies to people, are only available at night</h1> 
+                        </div>
+                        <div class="Lines" style="top: 14.1vw;" ></div>
+                        <div class="LinesDOWN" style="top: 17.5vw;"></div>
+                    </div>
+
+                </div>
 
             </div>
         </div>

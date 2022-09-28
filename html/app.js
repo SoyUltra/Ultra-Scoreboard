@@ -1,3 +1,4 @@
+var robberyshow = false;
 window.addEventListener("message", function(event) {
     var v = event.data
     let bank = event.data.bank;
@@ -14,7 +15,6 @@ window.addEventListener("message", function(event) {
             $('.playersonline').html('<i class="fas fa-user"></i> Players:'+v.playerss+"/"+v.maxPlayers+'');
         break;
 
-        
         case "updatedatajob":
             $('.jdat1').text(v.mechanic);
             $('.jdat2').text(v.police);
@@ -22,7 +22,7 @@ window.addEventListener("message", function(event) {
             $('.jdat4').text(v.realestate);
             $('.jdat5').text(v.taxi);
             $('.jdat6').text(v.abogado);
-
+            canRob(v.police,v.robos);
         break;
 
         case "show":
@@ -31,10 +31,28 @@ window.addEventListener("message", function(event) {
 
         case "hide":
             $('.allscore').hide(300)
+            $('.robbery').hide(300)
+        break;
+
+        case "bottom":
+            $("#robberybottom").click(function () {
+                if ( robberyshow == false )
+                {
+                    $('.robbery').show(300)
+                    robberyshow = true;
+                }else{
+                    $('.robbery').hide(300)
+                    robberyshow = false;
+                }
+                
+            });
+        break;
+
+        case "showrobbery":
+            $('.planelrobberyalll').show(300)
         break;
     }
 });
-
 
 //EXIT//
 
@@ -46,6 +64,69 @@ function exitKey(event) {
     
     {
         $.post("https://Ultra-Scoreboard/exit", JSON.stringify({}))
+        $('.robbery').hide(300)
     }
 }
+
+
+function canRob(polices,robs)
+    
+    {
+    if(robs[0].requieredCops==polices){
+        $('.rdat1').text('✓');
+    }
+    else{
+        $('.rdat1').text('✘');
+    }
+    if(robs[1].requieredCops==polices){
+        $('.rdat2').text('✓');
+    }
+    else{
+        $('.rdat2').text('✘');
+    }
+    if(robs[2].requieredCops==polices){
+        $('.rdat3').text('✓');
+    }
+    else{
+        $('.rdat3').text('✘');
+    }
+    if(robs[3].requieredCops==polices){
+        $('.rdat4').text('✓');
+    }
+    else{
+        $('.rdat4').text('✘');
+    }
+    if(robs[4].requieredCops==polices){
+        $('.rdat5').text('✓');
+    }
+    else{
+        $('.rdat5').text('✘');
+    }
+    if(robs[5].requieredCops==polices){
+        $('.rdat6').text('✓');
+    }
+    else{
+        $('.rdat6').text('✘');
+    }
+    if(robs[6].requieredCops==polices){
+        $('.rdat7').text('✓');
+    }
+    else{
+        $('.rdat7').text('✘');
+    }
+    if(robs[7].requieredCops == polices){
+        $('.rdat8').text('✓');
+    }
+    else{
+        $('.rdat8').text('✘');
+    }
+    if(robs[8].requieredCops == polices){
+        $('.rdat9').text('✓');
+    }
+    else{
+        $('.rdat9').text('✘');
+    }
+}
+
+
 

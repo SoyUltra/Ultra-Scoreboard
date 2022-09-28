@@ -144,6 +144,68 @@ span {
 
 }
 
+.robberypanel {
+	position: absolute;
+	width: 1vw;
+	height: 8vw;
+	left: -1.04vw;
+	/* color: white; */
+	font: bold 12px Sans-Serif;
+	writing-mode: vertical-rl;
+  	text-orientation: upright;
+	text-align: center;
+	font-size: .75vw;
+	border-radius: .5vw 0vw 0vw .5vw;
+	background-color: var(--base-color);
+}
+
+.robberyconte {
+	color: white;
+	background-color: var(--base-color);
+}
+
+[class="robberybottom"]:hover {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	background-color: rgb(255, 255, 255);
+    color: white;
+	opacity: 5.5;
+}
+
+
+.robberyconte {
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 11vw;
+	height: 18.7vw;
+	background: rgb(0, 0, 0);
+	border-radius: .5vw .5vw 0vw 0vw;
+}
+
+.robs {
+	color: white;
+	position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .8vw;
+	text-align: left;
+	top: 4.6vw;
+	left: 1.2vw;
+}
+
+.rulesdetail {
+	position: absolute;
+    color: rgb(255, 255, 255); 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .3vw;
+	text-align: center;
+	top: 15vw;
+	left: 1.5vw;
+	width: 8vw;
+	border-radius: 0vw 0vw 0vw 0vw;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.637);
+}
+
 /* animacion logo */
 
  @-webkit-keyframes heartbeat {
