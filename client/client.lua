@@ -10,7 +10,7 @@ local PlayerData = nil
 local ped, pid, Player, playerId, player
 local OpenMenu = false
 
--- Start Frameworks 
+-- Start Frameworksw
 
 if Config.Framework == "QBCORE" then
     QBCore = exports["qb-core"]:GetCoreObject()
