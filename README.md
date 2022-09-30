@@ -6,6 +6,8 @@ ESX support
 Remember to edit fxmanifest on ESX Servers
 
 FREE | Scoreboard
+
+REMEMBER: ESX Users Clear fxmanifest 2
  
 ID - NAMES - PHONE - JOB - BANK
 
