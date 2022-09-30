@@ -3,6 +3,8 @@
 QBCore support
 ESX support
 
+Remember to edit fxmanifest on ESX Servers
+
 FREE | Scoreboard
  
 ID - NAMES - PHONE - JOB - BANK
