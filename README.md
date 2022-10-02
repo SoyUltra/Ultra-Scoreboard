@@ -1,7 +1,6 @@
 # Ultra-Scoreboard
 
-QBCore support
-ESX support
+QBCore & ESX support
 
 FREE | Scoreboard
  
