@@ -2,7 +2,7 @@
 
 QBCore & ESX support
 
-Remember to edit fxmanifest on ESX Servers
+Remember to edit fxmanifest on ESX Servers!
 
 FREE | Scoreboard
 
