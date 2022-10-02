@@ -180,3 +180,30 @@ GroupDigits = function(value)
     local left,num,right = string.match(value,'^([^%d]*%d)(%d*)(.-)$')
     return left..(num:reverse():gsub('(%d%d%d)','%1' .. ','):reverse())..right
 end
+
+--- Comunity functions 
+local mwait = 1000
+if Config.UseRobberys == false then
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(mwait)
+        if OpenMenu then
+            mwait = 5
+        else 
+            mwait = 1000
+        end
+        if IsDisabledControlJustReleased(0, 200) then
+                       -- print("HI")
+                        OpenMenu = false
+                        SetNuiFocus(false, false)
+                        SendNUIMessage({action = 'hide'})
+        end
+        if IsControlJustReleased(0, 177) or  IsControlJustReleased(0, 202) then
+                --print("HI")
+                OpenMenu = false
+                SetNuiFocus(false, false)
+                SendNUIMessage({action = 'hide'})
+        end
+    end    
+end)
+end
