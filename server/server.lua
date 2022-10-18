@@ -72,19 +72,19 @@ elseif Config.Framework == "QBCORE" then
         for k, v in pairs(QBCore.Functions.GetPlayers()) do
             local Player = QBCore.Functions.GetPlayer(v)
 
-            if Player.PlayerData.job.name == "mechanic" then
+            if Player.PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty then
                 MechanicCount = MechanicCount + 1
-            elseif Player.PlayerData.job.name == "mechanic2" then
+            elseif Player.PlayerData.job.name == "mechanic2" and Player.PlayerData.job.onduty then
                 Mechanic2Count = Mechanic2Count + 1
-            elseif Player.PlayerData.job.name == "police" then
+            elseif Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
                 PoliceCount = PoliceCount + 1
-            elseif Player.PlayerData.job.name == "ambulance" then
+            elseif Player.PlayerData.job.name == "ambulance" and Player.PlayerData.job.onduty then
                 AmbulanceCount = AmbulanceCount + 1
-            elseif Player.PlayerData.job.name == "taxi" then
+            elseif Player.PlayerData.job.name == "taxi" and Player.PlayerData.job.onduty then
                 TaxiCount = TaxiCount + 1
-            elseif Player.PlayerData.job.name == "realestate" then
+            elseif Player.PlayerData.job.name == "realestate" and Player.PlayerData.job.onduty then
                 RealestateCount = RealestateCount + 1
-            elseif Player.PlayerData.job.name == "abogado" then
+            elseif Player.PlayerData.job.name == "abogado" and Player.PlayerData.job.onduty then
                 AbogadoCount = AbogadoCount + 1
             end
         end
