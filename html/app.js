@@ -8,6 +8,7 @@ window.addEventListener("message", function(event) {
         case "updatedata":
             $('.logoconfig').attr('src', v.logo);
             $('.job').text('Job: '+v.job);
+            $('.gang').text('Gang: '+v.gang);
             $('.name').text('Name: '+v.name);
             $('.phone').text('Phone: '+v.phone);
             $('.id').html('ID: '+v.pid);
