@@ -20,7 +20,7 @@ Config.MaxPlayers =                     GetConvarInt('sv_maxclients', 70)
 Config.TypeIconMoney =                  " $"
 
 Config.NoJob =                          "unemployed"
-
+Config.NoGang =                          "Ninguna"
 Config.UseRobberys = true
 
 --!!WARNING!! 
